@@ -2053,7 +2053,7 @@ input, select, textarea {
 		left: 0;
 		overflow-y: auto;
 		position: fixed;
-		text-align: right;
+		text-align: left;
 		top: 0;
 		width: 375px;
 	}
@@ -2099,6 +2099,7 @@ input, select, textarea {
 		margin: 1.75em 1.5em 1.5em 1.5em;
 		min-height: 48px;
 		cursor: default;
+		text-align: center;
 	}
 
 		#logo h1 {
@@ -2119,9 +2120,19 @@ input, select, textarea {
 		}
 
 		#logo .image {
+			position: relative;
+			padding-bottom: 100%;
+			width: 100%;
+		}
+
+		#logo .image img {
 			position: absolute;
-			left: 0;
 			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
 		}
 
 	#nav ul {
@@ -2154,8 +2165,7 @@ input, select, textarea {
 				}
 
 					#nav ul li a span:before {
-						position: absolute;
-						left: 0;
+						margin-right: 5px;
 						color: #41484c;
 						text-align: center;
 						width: 1.25em;
