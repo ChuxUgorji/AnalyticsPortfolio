@@ -1982,18 +1982,35 @@ input, select, textarea {
 	.item {
 		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
 		margin-bottom: 40px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
+		.item .image {
+			height: 15rem;
+		}
+
+		.item .image img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
 
 		.item header {
 			background: #fff;
 			margin: 0;
-			padding: 1em 0 1em 0;
+			padding: 1em;
 			font-size: 0.8em;
+			flex-grow: 1;
 		}
 
 			.item header h3 {
 				font-size: 1em;
 			}
+
+		.item footer {
+			margin: 1rem;
+		}
 
 /* Icons */
 
